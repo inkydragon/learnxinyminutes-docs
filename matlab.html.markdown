@@ -15,7 +15,8 @@ If you have any feedback please feel free to reach me at
 [osvaldo.t.mendoza@gmail.com](mailto:osvaldo.t.mendoza@gmail.com).
 
 ```matlab
-%% Code sections start with two percent signs. Section titles go on the same line.
+%% Code sections start with two percent signs. 
+%% Section titles go on the same line.
 % Comments start with a percent sign.
 
 %{
@@ -25,21 +26,23 @@ like
 this
 %}
 
-% Two percent signs denote the start of a new code section
-% Individual code sections can be run by moving the cursor to the section followed by
-% either clicking the "Run Section" button
-% or     using Ctrl+Shift+Enter (Windows) or Cmd+Shift+Return (OS X)
+% Two percent signs denote the start of a new code section.
+% Individual code sections can be run by moving the cursor to the section 
+%   followed by either clicking the "Run Section" button
+%   or using Ctrl+Shift+Enter (Windows) or Cmd+Shift+Return (OS X)
 
 %% This is the start of a code section
-%  One way of using sections is to separate expensive but unchanging start-up code like loading data
-load myFile.mat y
+%  One way of using sections is to separate expensive but unchanging start-up 
+%   code like loading data load myFile.mat y
 
 %% This is another code section
-%  This section can be edited and run repeatedly on its own, and is helpful for exploratory programming and demos
+%  This section can be edited and run repeatedly on its own, 
+%   and is helpful for exploratory programming and demos
 A = A * 2;
 plot(A);
 
-%% Code sections are also known as code cells or cell mode (not to be confused with cell arrays)
+%% Code sections are also known as code cells or cell mode 
+%   (not to be confused with cell arrays)
 
 
 % commands can span multiple lines, using '...':
@@ -68,7 +71,8 @@ profile viewer 	% Open profiler
 
 help command 	% Displays documentation for command in Command Window
 doc command 	% Displays documentation for command in Help Window
-lookfor command % Searches for command in the first commented line of all functions
+lookfor command % Searches for command in the first commented line of 
+                %   all functions
 lookfor command -all % searches for command in all functions
 
 
@@ -229,7 +233,6 @@ A'  % Concise version of complex transpose
 
 
 
-
 % Element by Element Arithmetic vs. Matrix Arithmetic
 % On their own, the arithmetic operators act on whole matrices. When preceded
 % by a period, they act on each element instead. For example:
@@ -245,7 +248,8 @@ sqrtm(A) %  find the matrix whose square is A
 
 
 % Plotting
-x = 0:.10:2*pi; % Creates a vector that starts at 0 and ends at 2*pi with increments of .1
+x = 0:.10:2*pi; % Creates a vector that starts at 0 and ends at 2*pi 
+                %   with increments of .1
 y = sin(x);
 plot(x,y)
 xlabel('x axis')
@@ -299,9 +303,14 @@ clf clear % clear current figure window, and reset most figure properties
 % The function get returns a handle to the current figure
 h = plot(x, y); % you can save a handle to a figure when you create it
 set(h, 'Color', 'r')
-% 'y' yellow; 'm' magenta, 'c' cyan, 'r' red, 'g' green, 'b' blue, 'w' white, 'k' black
+% Colors: 
+%   'y' yellow, 'm' magenta,  'c' cyan, 
+%   'r' red,    'g' green,    'b' blue, 
+%   'w' white,  'k' black
 set(h, 'LineStyle', '--')
- % '--' is solid line, '---' dashed, ':' dotted, '-.' dash-dot, 'none' is no line
+% Line style: 
+%   '--' is solid line, '---' dashed, ':' dotted, 
+%   '-.' dash-dot, 'none' is no line
 get(h, 'LineStyle')
 
 
@@ -406,7 +415,8 @@ username = 'root';
 password = 'root';
 driver = 'com.mysql.jdbc.Driver';
 dburl = ['jdbc:mysql://localhost:8889/' dbname];
-javaclasspath('mysql-connector-java-5.1.xx-bin.jar'); %xx depends on version, download available at http://dev.mysql.com/downloads/connector/j/
+javaclasspath('mysql-connector-java-5.1.xx-bin.jar'); 
+% xx depends on version, download available at http://dev.mysql.com/downloads/connector/j/
 conn = database(dbname, username, password, driver, dburl);
 sql = ['SELECT * from table_name where id = 22'] % Example sql statement
 a = fetch(conn, sql) %a will contain your data
@@ -459,7 +469,8 @@ pinv(A) % calculate the pseudo-inverse
 zeros(m,n) % m x n matrix of 0's
 ones(m,n) % m x n matrix of 1's
 diag(A) % Extracts the diagonal elements of a matrix A
-diag(x) % Construct a matrix with diagonal elements listed in x, and zeroes elsewhere
+diag(x) % Construct a matrix with diagonal elements listed in x, 
+        %   and zeroes elsewhere
 eye(m,n) % Identity matrix
 linspace(x1, x2, n) % Return n equally spaced points, with min x1 and max x2
 inv(A) % Inverse of matrix A
@@ -480,9 +491,16 @@ fliplr(A) % Flip matrix left to right
 flipud(A) % Flip matrix up to down
 
 % Matrix Factorisations
-[L, U, P] = lu(A) % LU decomposition: PA = LU,L is lower triangular, U is upper triangular, P is permutation matrix
-[P, D] = eig(A) % eigen-decomposition: AP = PD, P's columns are eigenvectors and D's diagonals are eigenvalues
-[U,S,V] = svd(X) % SVD: XV = US, U and V are unitary matrices, S has non-negative diagonal elements in decreasing order
+[L, U, P] = lu(A)   % LU decomposition: PA = LU,
+                    %   L is lower triangular, 
+                    %   U is upper triangular, 
+                    %   P is permutation matrix
+[P, D]    = eig(A)  % eigen-decomposition: AP = PD, 
+                    %   P's columns are eigenvectors and 
+                    %   D's diagonals are eigenvalues
+[U,S,V]   = svd(X)  % SVD: XV = US, 
+                    %   U and V are unitary matrices, 
+                    %   S has non-negative diagonal elements in decreasing order
 
 % Common vector functions
 max     % largest component
@@ -496,9 +514,11 @@ median  % median value
 mean    % mean value
 std     % standard deviation
 perms(x) % list all permutations of elements of x
-find(x) % Finds all non-zero elements of x and returns their indexes, can use comparison operators, 
-        % i.e. find( x == 3 ) returns indexes of elements that are equal to 3
-        % i.e. find( x >= 3 ) returns indexes of elements greater than or equal to 3
+find(x) 
+% Finds all non-zero elements of x and returns their indexes, 
+%   can use comparison operators, 
+% i.e. find( x == 3 ) returns indexes of elements that are equal to 3
+% i.e. find( x >= 3 ) returns indexes of elements greater than or equal to 3
 
 
 % Classes
