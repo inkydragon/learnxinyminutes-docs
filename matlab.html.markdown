@@ -11,7 +11,7 @@ contributors:
 MATLAB stands for MATrix LABoratory. It is a powerful numerical computing language commonly used in engineering and mathematics.
 
 If you have any feedback please feel free to reach me at
-[@the_ozzinator](https://twitter.com/the_ozzinator), or
+[Ozzy (@the_ozzinator)](https://twitter.com/the_ozzinator), or
 [osvaldo.t.mendoza@gmail.com](mailto:osvaldo.t.mendoza@gmail.com).
 
 ```matlab
@@ -577,8 +577,7 @@ c = a + b
 
 ## More on Matlab
 
-* [The official website](http://www.mathworks.com/products/matlab/)
-* [The official MATLAB Answers forum](http://www.mathworks.com/matlabcentral/answers/)
-* [Loren on the Art of MATLAB](http://blogs.mathworks.com/loren/)
-* [Cleve's Corner](http://blogs.mathworks.com/cleve/)
-
+* [The official website](https://www.mathworks.com/products/matlab.html)
+* [The official MATLAB Answers forum](https://www.mathworks.com/matlabcentral/answers/)
+* [Loren on the Art of MATLAB](https://blogs.mathworks.com/loren/)
+* [Cleve’s Corner: Cleve Moler on Mathematics and Computing](https://blogs.mathworks.com/cleve/)
